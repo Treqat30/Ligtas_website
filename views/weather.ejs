@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <title>Ligtas</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body id="body-bg">
+    <nav>
+      <div class="logo">
+        <div>
+          <img src="img/logo.png" alt="logo" />
+        </div>
+        <p class="name">LIGTAS</p>
+        <p class="type">Weather Monitoring System</p>
+      </div>
+      <div class="nav-items">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li class="active"><a href="weather">Weather</a></li>
+          <li><a href="advisory">Advisories</a></li>
+          <li><a href="aboutUs">About Us</a></li>
+          <li><a href="contact">Contact</a></li>
+          <li class="dropdown">
+            <a href="login" class="dropbtn">Account</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="main-content">
+        <div class="types">
+          <div class="icon">
+            <img
+              onmouseover="displayLbl('temp')"
+              onmouseout="removeLbl('temp')"
+              onclick="navigateDisplay('temp');"
+              class="img-types"
+              src="img/temp.png"
+              alt="temp"
+            />
+            <div class="lbl" style="display: none" id="temp-label">
+              <img src="img/chevron-dark.png" alt="chevron" class="chevron" />
+              <p>Temperature</p>
+            </div>
+          </div>
+          <div class="icon">
+            <img
+              onmouseover="displayLbl('wind')"
+              onmouseout="removeLbl('wind')"
+              onclick="navigateDisplay('wind');"
+              class="img-types"
+              src="img/wind.png"
+              alt="wind"
+            />
+            <div class="lbl" style="display: none" id="wind-label">
+              <img src="img/chevron-dark.png" alt="chevron" class="chevron" />
+              <p>Wind Speed & Direction</p>
+            </div>
+          </div>
+          <div class="icon">
+            <img
+              onmouseover="displayLbl('pressure')"
+              onmouseout="removeLbl('pressure')"
+              onclick="navigateDisplay('pressure');"
+              class="img-types"
+              src="img/air-pressure.png"
+              alt="pressure"
+            />
+            <div class="lbl" style="display: none" id="pressure-label">
+              <img src="img/chevron-light.png" alt="chevron" class="chevron" />
+              <p>Air Pressure</p>
+            </div>
+          </div>
+          <div class="icon">
+            <img
+              onmouseover="displayLbl('humidity')"
+              onmouseout="removeLbl('humidity')"
+              onclick="navigateDisplay('water');"
+              class="img-types"
+              src="img/water.png"
+              alt="water"
+            />
+            <div class="lbl" style="display: none" id="humidity-label">
+              <img src="img/chevron-dark.png" alt="chevron" class="chevron" />
+              <p>Humidity</p>
+            </div>
+          </div>
+          <div class="icon">
+            <img
+              onmouseover="displayLbl('intensity')"
+              onmouseout="removeLbl('intensity')"
+              onclick="navigateDisplay('rain');"
+              class="img-types"
+              src="img/rain.png"
+              alt="rain"
+            />
+            <div class="lbl" style="display: none" id="intensity-label">
+              <img src="img/chevron-light.png" alt="chevron" class="chevron" />
+              <p>Rainfall Intensity</p>
+            </div>
+          </div>
+          <div class="icon">
+            <img
+              onmouseover="displayLbl('level')"
+              onmouseout="removeLbl('level')"
+              onclick="navigateDisplay('level');"
+              class="img-types"
+              src="img/level.png"
+              alt="level"
+            />
+            <div class="lbl" style="display: none" id="level-label">
+              <img src="img/chevron-light.png" alt="chevron" class="chevron" />
+              <p>Water Level</p>
+            </div>
+          </div>
+        </div>
+        <div class="weather" id="temp" style="display: none">
+          <div class="card">
+            <h1>Temperature</h1>
+            <div class="display">
+              <div>
+                <img
+                  src="img/temp-icon.png"
+                  alt="temp-icon"
+                  class="w-card-icon"
+                />
+              </div>
+              <div>
+                <h3><%= temp %> °C</h3>
+              </div>
+              <div>
+                <p>Mostly Cloudy</p>
+              </div>
+            </div>
+            <p class="text-center">
+              Real-time Weather Prediction for every one hour
+            </p>
+            <div id="scroll">
+              <div class="weather-display-card">
+                <div class="w-card">
+                  <p class="w-time">6:00 AM</p>
+                  <img class="icon" src="img/cloudy-icon.png" alt="cloudy" />
+                  <hr />
+                  <p class="temp">{{29°C}}</p>
+                </div>
+                <div class="w-card">
+                  <p class="w-time">7:00 AM</p>
+                  <img class="icon" src="img/rainy-icon.png" alt="rainy" />
+                  <hr />
+                  <p class="temp">24°C</p>
+                </div>
+                <div class="w-card">
+                  <p class="w-time">8:00 AM</p>
+                  <img class="icon" src="img/cloudy-icon.png" alt="cloudy" />
+                  <hr />
+                  <p class="temp">27°C</p>
+                </div>
+                <div class="w-card">
+                  <p class="w-time">9:00 AM</p>
+                  <img class="icon" src="img/thunder-icon.png" alt="thunder" />
+                  <hr />
+                  <p class="temp">25°C</p>
+                </div>
+                <div class="w-card">
+                  <p class="w-time">10:00 AM</p>
+                  <img class="icon" src="img/cloudy-icon.png" alt="cloudy" />
+                  <hr />
+                  <p class="temp">31°C</p>
+                </div>
+                <div class="w-card">
+                  <p class="w-time">11:00 AM</p>
+                  <img class="icon" src="img/cloudy-icon.png" alt="cloudy" />
+                  <hr />
+                  <p class="temp">28°C</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="weather" id="pressure" style="display: none">
+          <div class="card">
+            <h1>Air Pressure</h1>
+            <div class="display">
+              <div>
+                <img
+                  src="img/air-pressure-icon.png"
+                  alt="air-icon"
+                  class="w-card-icon"
+                />
+              </div>
+              <div>
+                <h2><%= airPressure %></h2>
+              </div>
+            </div>
+            <p class="text-center">
+              Real-time Weather Prediction for every one hour
+            </p>
+            <div id="scroll">
+              <div class="weather-display-card">
+                <div class="w-card">
+                  <p class="w-time">6:00 AM</p>
+                  <p class="air-pressure">1101 mb</p>
+                </div>
+                <div class="w-card">
+                  <p class="w-time">7:00 AM</p>
+                  <p class="air-pressure">1020 mb</p>
+                </div>
+                <div class="w-card">
+                  <p class="w-time">8:00 AM</p>
+                  <p class="air-pressure">1013 mb</p>
+                </div>
+                <div class="w-card">
+                  <p class="w-time">9:00 AM</p>
+                  <p class="air-pressure">1015 mb</p>
+                </div>
+                <div class="w-card">
+                  <p class="w-time">10:00 AM</p>
+                  <p class="air-pressure">1023 mb</p>
+                </div>
+                <div class="w-card">
+                  <p class="w-time">11:00 AM</p>
+                  <p class="air-pressure">1043 mb</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="weather" id="water" style="display: none">
+          <div class="card">
+            <h1>Humidity</h1>
+            <div class="display">
+              <div>
+                <img
+                  src="img/humidity-icon.png"
+                  alt="humidity-icon"
+                  class="w-card-icon"
+                />
+              </div>
+              <div>
+                <h2><%= humid %> %</h2>
+              </div>
+            </div>
+            <p class="text-center">
+              Real-time Weather Prediction for every one hour
+            </p>
+            <div id="scroll">
+              <div class="weather-display-card">
+                <div class="w-card">
+                  <p class="w-time">6:00 AM</p>
+                  <img class="icon" src="img/water-icon.png" alt="cloudy" />
+                  <hr />
+                  <p class="temp">70%</p>
+                </div>
+                <div class="w-card">
+                  <p class="w-time">7:00 AM</p>
+                  <img class="icon" src="img/water-icon.png" alt="rainy" />
+                  <hr />
+                  <p class="temp">70%</p>
+                </div>
+                <div class="w-card">
+                  <p class="w-time">8:00 AM</p>
+                  <img class="icon" src="img/water-icon.png" alt="cloudy" />
+                  <hr />
+                  <p class="temp">75%</p>
+                </div>
+                <div class="w-card">
+                  <p class="w-time">9:00 AM</p>
+                  <img class="icon" src="img/water-icon.png" alt="thunder" />
+                  <hr />
+                  <p class="temp">71%</p>
+                </div>
+                <div class="w-card">
+                  <p class="w-time">10:00 AM</p>
+                  <img class="icon" src="img/water-icon.png" alt="cloudy" />
+                  <hr />
+                  <p class="temp">79%</p>
+                </div>
+                <div class="w-card">
+                  <p class="w-time">11:00 AM</p>
+                  <img class="icon" src="img/water-icon.png" alt="cloudy" />
+                  <hr />
+                  <p class="temp">73%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="weather" id="rain" style="display: none">
+          <div class="card">
+            <h1>Rainfall Intensity</h1>
+            <div class="display">
+              <div>
+                <img
+                  src="img/rain-icon.png"
+                  alt="humidity-icon"
+                  class="w-card-icon"
+                />
+              </div>
+              <div>
+                <h3><%= rainIntensity %></h3>
+              </div>
+              <div>
+                <div>
+                  <p>NO SIGNIFICANT AMOUNT OF RAINFALL WAS RECORDED</p>
+                </div>
+              </div>
+            </div>
+            <p class="text-center">
+              Real-time Weather Prediction for every one hour
+            </p>
+            <div id="scroll">
+              <div class="weather-display-card">
+                <div class="w-card">
+                  <p class="w-time">6:00 AM</p>
+                  <h2>10%</h2>
+                  <hr />
+                  <p class="temp">1.7 mm</p>
+                </div>
+                <div class="w-card">
+                  <p class="w-time">7:00 AM</p>
+                  <h2>5%</h2>
+                  <hr />
+                  <p class="temp">2 mm</p>
+                </div>
+                <div class="w-card">
+                  <p class="w-time">8:00 AM</p>
+                  <h2>20%</h2>
+                  <hr />
+                  <p class="temp">2.3 mm</p>
+                </div>
+                <div class="w-card">
+                  <p class="w-time">9:00 AM</p>
+                  <h2>15%</h2>
+                  <hr />
+                  <p class="temp">2.9 mm</p>
+                </div>
+                <div class="w-card">
+                  <p class="w-time">10:00 AM</p>
+                  <h2>13%</h2>
+                  <hr />
+                  <p class="temp">2.1 mm</p>
+                </div>
+                <div class="w-card">
+                  <p class="w-time">11:00 AM</p>
+                  <h2>9%</h2>
+                  <hr />
+                  <p class="temp">1.9 mm</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="weather" id="wind" style="display: none">
+          <div class="card">
+            <h1>Wind Speed and Direction</h1>
+            <div class="display">
+              <div>
+                <img
+                  src="img/wind-arrow.png"
+                  alt="temp-icon"
+                  class="w-card-icon"
+                />
+              </div>
+              <div>
+                <h3><%= windSpeed %> m/s</h3>
+                <p class="label"><%= windDirection %></p>
+              </div>
+            </div>
+            <p class="text-center">
+              Real-time Weather Prediction for every one hour
+            </p>
+            <div id="scroll">
+              <div class="weather-display-card">
+                <div class="w-card">
+                  <p class="w-time">6:00 AM</p>
+                  <h3>20 m/s</h3>
+                  <hr />
+                  <p class="temp">Wind out of the NE</p>
+                </div>
+                <div class="w-card">
+                  <p class="w-time">7:00 AM</p>
+                  <h3>22 m/s</h3>
+                  <hr />
+                  <p class="temp">Wind out of the ENE</p>
+                </div>
+                <div class="w-card">
+                  <p class="w-time">8:00 AM</p>
+                  <h3>17 m/s</h3>
+                  <hr />
+                  <p class="temp">Wind out of the NE</p>
+                </div>
+                <div class="w-card">
+                  <p class="w-time">9:00 AM</p>
+                  <h3>19 m/s</h3>
+                  <hr />
+                  <p class="temp">Wind out of the EN</p>
+                </div>
+                <div class="w-card">
+                  <p class="w-time">10:00 AM</p>
+                  <h3>20 m/s</h3>
+                  <hr />
+                  <p class="temp">Wind out of the NE</p>
+                </div>
+                <div class="w-card">
+                  <p class="w-time">11:00 AM</p>
+                  <h3>24 m/s</h3>
+                  <hr />
+                  <p class="temp">Wind out of the NE</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="weather" id="level" style="display: none">
+          <p class="text-center">
+            Real-time Weather Prediction for every one hour
+          </p>
+          <div class="row">
+            <div class="col-card-4">
+              <p>Water Level Status in</p>
+              <h2>Marigold St.</h2>
+              <p class="normal">Normal</p>
+              <div id="scroll-card">
+                <div class="level-card">
+                  <div>
+                    <p class="header">FORECAST WATER LEVEL AT 6 AM</p>
+                    <h2>DISTANCE REACHED: 2m</h2>
+                    <p class="description">
+                      WATER LEVEL IS EXPECTED TO REMAIN NORMAL DURING THE
+                      FORECAST PERIOD.
+                    </p>
+                  </div>
+                  <div>
+                    <p class="header">FORECAST WATER LEVEL AT 7 AM</p>
+                    <h2>DISTANCE REACHED: 2m</h2>
+                    <p class="description">
+                      WATER LEVEL IS EXPECTED TO REMAIN NORMAL DURING THE
+                      FORECAST PERIOD.
+                    </p>
+                  </div>
+                  <div>
+                    <p class="header">FORECAST WATER LEVEL AT 8 AM</p>
+                    <h2>DISTANCE REACHED: 2m</h2>
+                    <p class="description">
+                      WATER LEVEL IS EXPECTED TO REMAIN NORMAL DURING THE
+                      FORECAST PERIOD.
+                    </p>
+                  </div>
+                  <div>
+                    <p class="header">FORECAST WATER LEVEL AT 9 AM</p>
+                    <h2>DISTANCE REACHED: 2m</h2>
+                    <p class="description">
+                      WATER LEVEL IS EXPECTED TO REMAIN NORMAL DURING THE
+                      FORECAST PERIOD.
+                    </p>
+                  </div>
+                  <div>
+                    <p class="header">FORECAST WATER LEVEL AT 10 AM</p>
+                    <h2>DISTANCE REACHED: 2m</h2>
+                    <p class="description">
+                      WATER LEVEL IS EXPECTED TO REMAIN NORMAL DURING THE
+                      FORECAST PERIOD.
+                    </p>
+                  </div>
+                  <div>
+                    <p class="header">FORECAST WATER LEVEL AT 11 AM</p>
+                    <h2>DISTANCE REACHED: 2m</h2>
+                    <p class="description">
+                      WATER LEVEL IS EXPECTED TO REMAIN NORMAL DURING THE
+                      FORECAST PERIOD.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-card-4">
+              <p>Water Level Status in</p>
+              <h2>Marigold St.</h2>
+              <p class="high">High</p>
+              <div id="scroll-card">
+                <div class="level-card">
+                  <div>
+                    <p class="header">FORECAST WATER LEVEL AT 6 AM</p>
+                    <h2>DISTANCE REACHED: 2m</h2>
+                    <p class="description">
+                      WATER LEVEL IS EXPECTED TO REMAIN NORMAL DURING THE
+                      FORECAST PERIOD.
+                    </p>
+                  </div>
+                  <div>
+                    <p class="header">FORECAST WATER LEVEL AT 7 AM</p>
+                    <h2>DISTANCE REACHED: 2m</h2>
+                    <p class="description">
+                      WATER LEVEL IS EXPECTED TO REMAIN NORMAL DURING THE
+                      FORECAST PERIOD.
+                    </p>
+                  </div>
+                  <div>
+                    <p class="header">FORECAST WATER LEVEL AT 8 AM</p>
+                    <h2>DISTANCE REACHED: 2m</h2>
+                    <p class="description">
+                      WATER LEVEL IS EXPECTED TO REMAIN NORMAL DURING THE
+                      FORECAST PERIOD.
+                    </p>
+                  </div>
+                  <div>
+                    <p class="header">FORECAST WATER LEVEL AT 6 AM</p>
+                    <h2>DISTANCE REACHED: 2m</h2>
+                    <p class="description">
+                      WATER LEVEL IS EXPECTED TO REMAIN NORMAL DURING THE
+                      FORECAST PERIOD.
+                    </p>
+                  </div>
+                  <div>
+                    <p class="header">FORECAST WATER LEVEL AT 9 AM</p>
+                    <h2>DISTANCE REACHED: 2m</h2>
+                    <p class="description">
+                      WATER LEVEL IS EXPECTED TO REMAIN NORMAL DURING THE
+                      FORECAST PERIOD.
+                    </p>
+                  </div>
+                  <div>
+                    <p class="header">FORECAST WATER LEVEL AT 10 AM</p>
+                    <h2>DISTANCE REACHED: 2m</h2>
+                    <p class="description">
+                      WATER LEVEL IS EXPECTED TO REMAIN NORMAL DURING THE
+                      FORECAST PERIOD.
+                    </p>
+                  </div>
+                  <div>
+                    <p class="header">FORECAST WATER LEVEL AT 11 AM</p>
+                    <h2>DISTANCE REACHED: 2m</h2>
+                    <p class="description">
+                      WATER LEVEL IS EXPECTED TO REMAIN NORMAL DURING THE
+                      FORECAST PERIOD.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-card-4">
+              <p>Water Level Status in</p>
+              <h2>Marigold St.</h2>
+              <div class="row">
+                <p class="critical">Critical</p>
+                <img
+                  src="img/critical.png"
+                  class="critical-img"
+                  alt="critical"
+                />
+              </div>
+              <div id="scroll-card">
+                <div class="level-card">
+                  <div>
+                    <p class="header">FORECAST WATER LEVEL AT 6 AM</p>
+                    <h2>DISTANCE REACHED: 2m</h2>
+                    <p class="description">
+                      WATER LEVEL IS EXPECTED TO REMAIN NORMAL DURING THE
+                      FORECAST PERIOD.
+                    </p>
+                  </div>
+                  <div>
+                    <p class="header">FORECAST WATER LEVEL AT 7 AM</p>
+                    <h2>DISTANCE REACHED: 2m</h2>
+                    <p class="description">
+                      WATER LEVEL IS EXPECTED TO REMAIN NORMAL DURING THE
+                      FORECAST PERIOD.
+                    </p>
+                  </div>
+                  <div>
+                    <p class="header">FORECAST WATER LEVEL AT 8 AM</p>
+                    <h2>DISTANCE REACHED: 2m</h2>
+                    <p class="description">
+                      WATER LEVEL IS EXPECTED TO REMAIN NORMAL DURING THE
+                      FORECAST PERIOD.
+                    </p>
+                  </div>
+                  <div>
+                    <p class="header">FORECAST WATER LEVEL AT 9 AM</p>
+                    <h2>DISTANCE REACHED: 2m</h2>
+                    <p class="description">
+                      WATER LEVEL IS EXPECTED TO REMAIN NORMAL DURING THE
+                      FORECAST PERIOD.
+                    </p>
+                  </div>
+                  <div>
+                    <p class="header">FORECAST WATER LEVEL AT 10 AM</p>
+                    <h2>DISTANCE REACHED: 2m</h2>
+                    <p class="description">
+                      WATER LEVEL IS EXPECTED TO REMAIN NORMAL DURING THE
+                      FORECAST PERIOD.
+                    </p>
+                  </div>
+                  <div>
+                    <p class="header">FORECAST WATER LEVEL AT 11 AM</p>
+                    <h2>DISTANCE REACHED: 2m</h2>
+                    <p class="description">
+                      WATER LEVEL IS EXPECTED TO REMAIN NORMAL DURING THE
+                      FORECAST PERIOD.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="summary" id="summary">
+          <h1>Weather in Pulang Lupa Dos</h1>
+          <h3>Temperature <%= temp %>°C</h3>
+          <div class="weather-status">
+            <img
+              src="https://img.icons8.com/sf-black-filled/64/FFFFFF/clouds.png"
+            />
+            <p>Mostly cloudy</p>
+          </div>
+          <p>Humidity: <%= humid %> %</p>
+          <p>Wind: &lt; %= temp %>km/h</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="time" id="time">
+      <p>Philippine Standard Time</p>
+      <p id="todaysTime"></p>
+      <p id="date"></p>
+    </div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

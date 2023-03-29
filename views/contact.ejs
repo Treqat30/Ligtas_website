@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <title>Ligtas</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <nav class="nav-colored">
+      <div class="logo">
+        <div>
+          <img src="img/logo.png" alt="logo" />
+        </div>
+        <p class="name">LIGTAS</p>
+        <p class="type">Weather Monitoring System</p>
+      </div>
+      <div class="nav-items">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="weather">Weather</a></li>
+          <li><a href="advisory">Advisories</a></li>
+          <li><a href="aboutUs">About Us</a></li>
+          <li class="active"><a href="contact">Contact</a></li>
+          <li class="dropdown">
+            <a href="login" class="dropbtn">Account</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="contact">
+      <div class="form">
+        <form
+          method="post"
+          action="/cont/send"
+          enctype="application/x-www-form-urlencoded"
+        >
+          <h1>Leave us a Message</h1>
+          <div class="form-group">
+            <p>Your Name</p>
+            <input type="text" name="name" id="name" required />
+          </div>
+          <div class="form-group">
+            <p>Your Email</p>
+            <input type="email" name="email" id="email" required />
+          </div>
+          <div class="form-group">
+            <p>Message</p>
+            <textarea
+              id="message"
+              name="message"
+              rows="10"
+              cols="50"
+              required
+            ></textarea>
+          </div>
+          <div class="form-action">
+            <button type="submit">SUBMIT</button>
+          </div>
+        </form>
+      </div>
+      <div class="side-contact">
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe
+              class="gmap_iframe"
+              width="100%"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+              src="https://maps.google.com/maps?width=100&amp;height=400&amp;hl=en&amp;q=pulang lupa dos&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            ></iframe
+            ><a href="https://piratebay-proxys.com/">Pirate bay</a>
+          </div>
+          <style>
+            .mapouter {
+              /* position: relative; */
+              text-align: right;
+              width: 100%;
+              height: 300px;
+            }
+
+            .gmap_canvas {
+              overflow: hidden;
+              background: none !important;
+              width: 100%;
+              height: 400px;
+            }
+
+            .gmap_iframe {
+              height: 400px !important;
+            }
+          </style>
+        </div>
+        <div class="contact-details">
+          <img
+            src="https://img.icons8.com/external-smashingstocks-glyph-smashing-stocks/30/A52A2A/external-location-pin-digital-marketing-smashingstocks-glyph-smashing-stocks.png"
+          />
+          <p>
+            Brgy. Pulang Lupa Dos, Las Piñas City, Metro Manila Philippines,
+            1742
+          </p>
+        </div>
+        <div class="contact-num">
+          <img src="https://img.icons8.com/ios-filled/50/000000/phone.png" />
+          <div>
+            <p>+63 1234-5678,</p>
+            <p>+63 9999567841</p>
+          </div>
+        </div>
+        <div class="contact-email">
+          <img
+            src="https://img.icons8.com/external-bearicons-glyph-bearicons/30/000000/external-Email-email-bearicons-glyph-bearicons.png"
+          />
+          <p>ligtas_laspinas@gmail.com</p>
+        </div>
+      </div>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,891 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+#body-bg {
+    background-image: url("/img/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
+.advisory-hero {
+    background-image: url("/img/Advisories BG.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    margin-top: 20px;
+}
+
+.home {
+    background-image: url("/img/Home BG.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    padding-top: 100px;
+}
+
+.nav-colored {
+    background-color: #ded9c8;
+}
+
+ul {
+    margin: 0px;
+}
+
+nav {
+    background-color: rgba(191, 191, 191, .5);
+    margin-top: 1%;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+}
+
+nav > .logo {
+    display: flex;
+    width: 35%;
+}
+
+nav > .logo > div {
+    width: 10%;
+}
+
+nav > .logo > div > img {
+    width: 150%;
+}
+
+nav > .logo > p {
+    margin-left: 10px;
+    margin-right: 2px;
+    color: #35445f;
+    margin-bottom: 0px;
+}
+
+nav > .logo > .name {
+    font-weight: bold;
+    font-weight: 900;
+    font-size: 30px;
+    letter-spacing: 3px;
+    margin:0px;
+    padding-left: 30px;
+    padding-top: 15px;
+}
+
+nav > .logo > .type {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-weight: 900;
+    font-size: 13px;
+    margin-top: 40px;
+}
+
+nav > .nav-items > ul {
+    list-style-type: none;
+    display: flex;
+    margin-top: 30px;
+    margin-left: 70px;
+}
+
+nav > .nav-items > ul > li {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+nav > .nav-items > ul > li > a {
+    text-decoration: none;
+    color: #35445f;
+    text-transform: uppercase;
+}
+
+nav > .nav-items > ul > li > .colored {
+    color: black;
+}
+
+.active {
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+
+.container {
+    padding: 1% 2%;
+}
+
+.container-home {
+    padding: 3% 15%;
+
+}
+
+.search {
+    float: right;
+}
+
+.search_box {
+    background:url("http://png-5.findicons.com/files/icons/980/yuuminco/256/search.png");
+    background-size:20px 20px;
+    background-repeat:no-repeat;
+    background-position: right;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding-right: 20px !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    padding-left: 5px !important;
+    float: left;
+}
+
+.main-content {
+    margin-top: 30px;
+    display: flex;
+}
+
+.types {
+    width: 23%;
+}
+
+.types > div {
+    margin-bottom: 30px;
+}
+
+.img-types {
+    width: 17%;
+    height: 17%;
+}
+
+.img-types:hover {
+    cursor: pointer;
+}
+
+.summary {
+    background-color: rgb(120, 149, 178, 0.8);
+    border-radius: 50px;
+    width: 35%;
+    height: 330px;
+    padding: 2%;
+    color: white;
+    font-weight: bold;
+    margin-left: 100px;
+}
+
+.summary > h1 {
+    margin: 0px;
+}
+
+.summary > h2 {
+    font-size: 60px;
+    padding-top: 20px;
+    margin: 0px;
+}
+
+.summary > p {
+    margin: 0px;
+    font-weight: lighter;
+}
+
+.weather-status {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.time {
+    float: right;
+    background-color: rgb(53, 68, 95);
+    width: 15%;
+    color: white;
+    font-weight: bold;
+    margin-right: 3%;
+    margin-top: -80px;
+}
+
+.time > p {
+    text-align: center;
+}
+
+/* About Us Page */
+.about {
+    background-image: url("/img/about-bg.png");
+    background-image: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+
+.about > p {
+    color: white;
+    text-align: center;
+    padding: 120px 0;
+    font-size: 40px;
+}
+
+.about > .content {
+    display: flex;
+    padding: 2% 5%;
+}
+
+.about > .content > p {
+    width: 50%;
+    padding: 2%;
+}
+
+.about > .content > .left {
+    border-right: 4px solid #879fb9;
+}
+
+
+.about > div {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.about > div > button {
+    background-color: #ab3333;
+    border: none;
+    padding: 1% 2%;
+    color: white;
+}
+
+.about > div > button:hover {
+    cursor: pointer;
+}
+
+/* Contact Page */
+.contact {
+    padding: 1% 3%;
+    display: flex;
+}
+
+.form {
+    width: 50%;
+}
+
+.form-group > input, textarea{
+    width: 100%;
+    padding: 5px;
+    border: 2px solid #ded9c8;
+    background-color: #E5ECF1;
+}
+
+.form-action {
+    text-align: right;
+}
+
+.form-action > button {
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-right: -15px;
+    margin-top: 20px;
+}
+
+.side-contact {
+    margin-left: 50px;
+    padding-top: 20px;
+}
+
+.contact-details {
+    margin-top: 120px;
+    display: flex;
+}
+
+.contact-details > img {
+    width: 30px;
+    height: 30px;
+}
+
+.contact-details > p {
+    width: 80%;
+    margin-top: -5px;
+    padding-left: 20px;
+}
+
+.contact-num, .contact-email {
+    display: flex;
+}
+
+.contact-num {
+    margin-bottom: 10px;
+}
+
+.contact-num > img {
+    width: 30px;
+    height: 30px;
+}
+
+.contact-num > div > p {
+    margin: 0px;
+    margin-top: -5px;
+    padding-left: 20px;
+
+}
+
+.contact-email > p {
+    margin: 0px;
+    padding-left: 20px;
+}
+
+.icon, .icon > div {
+    display: flex;
+}
+
+.icon > div > img {
+    height: 30px;
+    margin-top: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.icon > div > p {
+    background-color: rgba(255,255,255, 0.3);
+    min-height: 25px;
+    padding: 5px 10px;
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    color: #1A244B;
+    font-weight: bold;
+}
+
+.home-text {
+    padding-left: 200px;
+    color: #2C4A7E;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+.home-text > h1, .section-title {
+    margin: 0px;
+    text-shadow: 2px 2px gray;
+    color: #2C3256;
+}
+
+.section-title {
+    text-align: center;
+}
+
+.container-home > div > img {
+    width: 10%;
+}
+
+.pl-50 {
+    padding-left: 50px;
+}
+
+.white-bg {
+    background-color: white;
+}
+
+.row {
+    display: flex;
+}
+
+.description {
+    padding-left: 5%;
+    text-align: justify;
+}
+
+.logo-2 {
+    width: 80%;
+}
+
+#advisory-bg {
+    background-image: url("/img/advisory.png");
+    background-image: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.advisory-hero > h1 {
+    text-align: center;
+    padding-top: 100px;
+    color: white;
+    font-size: 50px;
+}
+
+.card-40 {
+    margin: 0 auto;
+    width: 40%;
+}
+
+.card-header-light {
+    background-color: #6b8597;
+    padding: 1px 20px;
+    color: white;
+    font-size: 25px;
+    margin: 0 auto;
+}
+
+.card-header-dark {
+    background-color: #324461;
+    padding: 5px 20px;
+    color: white;
+    font-size: 25px;
+    height: 94px;
+    display: flex;
+}
+
+.card-body-light {
+    background-color: #6b8597;
+    color: white;
+    margin-top: -17px;
+    padding: 4%;
+}
+
+.card-body-dark {
+    background-color: #2c3d5b;
+    padding: 4%;
+    color: white;
+}
+
+.card-header-dark > center > p {
+    margin: 0;
+}
+
+.card-header-light > center > p {
+    font-size: 35px;
+}
+
+.card-header-light > center > p > img {
+    height: 35px;
+    padding-left: 5px;
+}
+
+.col-60 {
+    flex: 60%;
+}
+
+.col-40 {
+    flex: 40%;
+}
+
+.small {
+    font-size: 13px;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.card-blue {
+    background-color: #435473;
+    border-style: dashed;
+    min-height: 340px;
+    width: 70%;
+    margin: 0 auto;
+    padding: 1%;
+}
+
+.card-blue > h2 {
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+}
+
+.col-3 {
+    flex: 33.33%;
+}
+
+.bg-red {
+    background-color: red;
+}
+
+.bg-orange {
+    background-color: orange;
+}
+
+.bg-yellow {
+    background-color: #FFD700;
+}
+
+.bg-green {
+    background-color: green;
+}
+
+.code {
+    color: white;
+    padding: 2%;
+}
+
+td {
+    padding: 2%;
+}
+
+tr {
+    border-bottom: 5px solid #435473;
+}
+
+.code > td > img {
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.right {
+    text-align: right;
+    padding-right: 50px;
+    margin-top: 20px;
+}
+
+.weather > .card {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 750px;
+    margin-left: 50px;
+    height: 500px;
+    border-radius: 20px;
+    padding: 4%;
+}
+
+.weather > .card > h1 {
+    text-align: center;
+    color: #1A244B;
+    margin: 0px;
+}
+
+#scroll {
+    width: 750px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+#scroll-card {
+    width: 280px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.weather > .card > #scroll > .weather-display-card, .level-card {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.weather > .card > #scroll > .weather-display-card > .w-card {
+    width: 180px;
+    height: 190px;
+}
+
+.weather-display-card > .w-card {
+    margin-right: 10px;
+    background-color: white;
+    margin-bottom: 20px;
+    width: 1000px;
+    border-radius: 15px;
+}
+
+.weather-display-card > .w-card > hr {
+    width: 50%;
+    margin-top: 10px;
+    border: 1px solid gray;
+}
+
+.weather-display-card > .w-card > .w-time {
+    background-color: #72C1F7;
+    margin: 0px;
+    text-align: center;
+    padding: 2px 5px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.weather-display-card > .w-card > .icon {
+    width: 70px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.weather-display-card > .w-card > .temp {
+    text-align: center;
+}
+
+.weather > .card > .display {
+    display: flex;
+}
+
+.weather > .card > .display > div {
+    width: 33.33%;
+}
+
+.weather > .card > .display > div > div > p {
+    background-color: red;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.weather > .card > .display > div > p.label {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+
+.weather > .card > .display > div > h2 {
+    color: #2D3C5B;
+    font-size: 100px;
+    margin: 0px;
+    text-align: center;
+    padding-top: 35px;
+}
+
+.weather > .card > .display > div > h3 {
+    color: #2D3C5B;
+    font-size: 60px;
+    margin: 0px;
+    text-align: center;
+    padding-top: 35px;
+}
+
+.weather > .card > .display > div > p {
+    padding-left: 60px;
+    padding-top: 75px;
+}
+
+.text-center {
+    text-align: center;
+    font-size: 20px;
+}
+
+.w-card-icon {
+    width: 70%;
+}
+
+.w-card > h2 {
+    color: #203B69;
+    text-align: center;
+    font-size: 40px;
+    margin: 15px;
+}
+
+.w-card h3 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.danger-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.water-level-card > .header > p {
+    background-color: #72C1F7;
+    text-align: center;
+    font-size: 25px;
+    margin: 0px;
+}
+
+.water-level-card > .content {
+    background-color: white;
+    padding: 30px;
+    height: 150px;
+}
+
+.water-level-card > .content > p {
+    padding: 0px 50px;
+    color: red;
+    text-align: center;
+    font-size: 24px;
+}
+
+.water-level-card > .content > img {
+    margin: auto;
+}
+
+.mt-100 {
+    margin-top: 100px;
+}
+
+.ml-20 {
+    margin-left: 20px;
+}
+
+.air-pressure {
+    margin-top: 60px;
+    text-align: center;
+    color: #203B69;
+    font-weight: bold;
+}
+
+.col-card-4 {
+    flex: 40%;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 280px;
+    border-radius: 20px;
+    margin-left: 20px;
+    padding: 8% 2%;
+}
+
+.col-card-4 > p {
+    color: #1A244B;
+    font-weight: light;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.col-card-4 > h2 {
+    color: #1A244B;
+    font-weight: light;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.col-card-4 > .normal {
+    color: #014D33;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 46px;
+    font-weight: bold;
+}
+
+.col-card-4 > .high {
+    color: #FF6100;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 46px;
+    font-weight: bold;
+}
+
+.col-card-4 > .row > p {
+    color: #FF0303;
+    font-size: 46px;
+    font-weight: bold;
+}
+
+.col-card-4 > div > div > div > .header {
+    background-color: #72C1F7;
+    padding: 10px 20px;
+    font-size: 12px;
+    text-align: center;
+    margin: 0px;
+}
+
+.col-card-4 > div > div > div > h2 {
+    text-align: center;
+    font-size: 15px;
+    background-color: white;
+    margin: 0px;
+    color: red;
+    font-weight: bold;
+}
+
+.col-card-4 > div > div > div > .description {
+    text-align: center;
+    font-size: 12px;
+    background-color: white;
+    margin: 0px;
+    padding: 20px 18px;
+    color: red;
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.critical {
+    margin-left: 40px;
+    font-size: 46px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.critical-img {
+    height: 40px;
+    margin-top: 28px;
+    margin-left: 10px;
+}
+
+.level-card > div {
+    width: 280px;
+    margin-right: 30px;
+}
+
+.blue {
+    color: #6B8697;
+}
+
+.content {
+    padding: 2% 3%;
+}
+
+.content > h1 {
+    text-align: center;
+    font-size: 45px;
+}
+
+.content > p {
+    text-align: center;
+}
+
+.content > p > a {
+    text-decoration: none;
+}
+
+.content > .card {
+    background-color: #6B8697;
+    width: 50%;
+    padding: 2%;
+    margin-top: 30px;
+}
+
+.content > .card input {
+    width: 96%;
+    padding: 2%;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.content > .card > div {
+    text-align: center;
+}
+
+.content > .card a {
+    color: white;
+    text-decoration: none;
+}
+
+.content > .card > div > button {
+    margin-top: 30px;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+
+.content > .card > table {
+    width: 100%;
+}
+
+.content > .card > table > tbody > tr {
+    border-bottom: none;
+}
+
+.content > .card > table > tbody > tr > td > input {
+    width: 80%;
+    padding: 2%;
+    border-radius: 5px;
+    border: none;
+}
+
+.content > .card > div {
+    text-align: center;
+}
+
+.content > .card > div > button {
+    margin-top: 30px;
+    text-align: center;
+    padding: 10px 20px;
+}
