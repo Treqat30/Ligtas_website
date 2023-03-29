@@ -2,8 +2,8 @@ const mqtt = require('mqtt');
 const mysql = require('mysql');
 // to create the mqtt client and connection
 const client = mqtt.connect('mqtt://au1.cloud.thethings.industries:1883', {
-  username: 'ligtas-system@packetworx',
-  password: 'NNSXS.FOQSN7FHGM4EQGUMZDQIDAOZ22FZSIFAGGQULCA.IUPA5TVP7PO7PIUOB3JX3CTCG6XZNMWUWTSOCSVZ256PR5XP6P6A'
+  username: '',
+  password: ''
 });
 
 // to create the connection
