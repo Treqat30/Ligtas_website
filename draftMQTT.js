@@ -15,7 +15,7 @@ const client = mqtt.connect('mqtt://au1.cloud.thethings.industries:1883', {
 //   });
 // to check the connection to the mysql database 
 
-const topic = 'v3/ligtas-system/devices/weathersystem/'
+const topic = 'v3/ligtas-system/devices/weathersystem/up'
 client.on('connect', () => {
   console.log('Connected to the MQTT Broker')
   client.subscribe([topic], () => {
